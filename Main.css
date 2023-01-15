@@ -1,0 +1,158 @@
+html {
+  font-family: Roboto;
+}
+body {
+  margin: 0;
+  max-width: 1440px;
+  text-align: center;
+  background-color: black;
+}
+.conteiner {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 34px 30px 270px 270px 65px;
+  gap: 15px;
+  grid-template-areas:
+    "h h h h h h"
+    "p p m m m m"
+    "a1 a1 pr1 pr2 pr3 pr4"
+    "a2 a2 pr5 pr6 pr7 pr8"
+    "f f f f f f";
+}
+.header {
+  grid-area: h;
+  background-color: #262626;
+  opacity: 0.9;
+}
+.header__element {
+  display: flex;
+  max-width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__block-basket {
+  padding-right: 15px;
+}
+.promotion {
+  grid-area: p;
+  font-weight: 400;
+  font-size: 24px;
+  color: white;
+}
+.menu {
+  grid-area: m;
+  font-weight: 400;
+  font-size: 24px;
+  color: white;
+  justify-items: center;
+}
+.footer {
+  grid-area: f;
+  font-size: 14px;
+  color: white;
+}
+.footer__contacts {
+display: block;
+}
+.footer__link {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
+.action1 {
+  background-color: black;
+  grid-area: a1;
+  background-image: url(./image/action1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.action2 {
+  background-color: antiquewhite;
+  grid-area: a2;
+  background-image: url(./image/action2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.product1 {
+  grid-area: pr1;
+}
+.product2 {
+  grid-area: pr2;
+}
+.product3 {
+  grid-area: pr3;
+}
+.product4 {
+  grid-area: pr4;
+}
+.product5 {
+  grid-area: pr5;
+}
+.product6 {
+  grid-area: pr6;
+}
+.product7 {
+  grid-area: pr7;
+}
+.product8 {
+  grid-area: pr8;
+}
+.product_image {
+  width: 135px;
+  height: 120px;
+  object-fit: contain;
+}
+.product__header {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+}
+.product__describe {
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+}
+
+@media screen and (max-width:1024px) {
+  .conteiner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 34px 30px 270px 270px 270px 270px 65px;
+    gap: 15px;
+    grid-template-areas:
+      "h h h h"
+      "p p m m"
+      "a1 a1 pr1 pr2"
+      ". . pr3 pr4"
+      "a2 a2 pr5 pr6"
+      ". . pr7 pr8"
+      "f f f f";
+  }
+}
+@media screen and (max-width:768px) {
+  .conteiner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 34px 30px 270px 270px 270px 270px 65px;
+    gap: 15px;
+    grid-template-areas:
+      "h h h h"
+      "m m m m"
+      ". pr1 pr2 ."
+      ". pr3 pr4 ."
+      ". pr5 pr6 ."
+      ". pr7 pr8 ."
+      "f f f f";
+  }
+  .promotion {
+    display: none;
+  }
+  .action1 {
+    display: none;
+  }
+  .action2 {
+    display: none;
+  }
+}
